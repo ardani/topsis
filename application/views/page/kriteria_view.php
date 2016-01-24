@@ -2,19 +2,19 @@
     <div class="col-md-4">
         <div class="box box-primary">
             <div class="box-header">
-                <h3 class="box-title">Form Jurusan</h3>
+                <h3 class="box-title">Form kriteria</h3>
             </div>
             <?php echo isset($msg) ? $msg : "" ?>
-            <form role="form" action="<?php echo  site_url("master/save_jurusan")?>" method="post">
+            <form role="form" action="<?php echo site_url("kriteria/save")?>" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Kode Jurusan</label>
-                        <input type="text" name="kode_jurusan" data-tag="input" class="form-control" placeholder="kode jurusan">
-                        <input type="hidden" name="id" data-tag="input" >
+                        <label for="exampleInputEmail1">Kode kriteria</label>
+                        <input type="text" name="kode_kriteria" data-tag="input" class="form-control" placeholder="kode kriteria">
+                        <input type="hidden" name="id_kriteria" data-tag="input" >
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Nama Jurusan</label>
-                        <input type="text" name="jurusan" data-tag="input" class="form-control" placeholder="nama jurusan">
+                        <label for="exampleInputPassword1">Nama kriteria</label>
+                        <input type="text" name="nama_kriteria" data-tag="input" class="form-control" placeholder="nama kriteria">
                     </div>
                 </div>
                 <div class="box-footer">
@@ -26,14 +26,14 @@
     <div class="col-md-8">
     <div class="box box-primary">
         <div class="box-header">
-            <h3 class="box-title">Data Jurusan</h3>
+            <h3 class="box-title">Data kriteria</h3>
         </div>
         <div class="box-body table-responsive">
            <table id="etable" class="table table-bordered table-hover">
                <thead>
                 <tr>
                     <th>Kode</th>
-                    <th>Jurusan</th>
+                    <th>kriteria</th>
                     <th>Menu</th>
                 </tr>
                </thead>
@@ -49,18 +49,18 @@
 </div>
 <script type="text/javascript">
     var oTable = $('#etable').dataTable({
-        "sAjaxSource": "/master/get_jurusan"
+        "sAjaxSource": "/kriteria/get"
     });
     var doc =  $('#etable');
     doc.on('click','.edit',function(){
         var id = $(this).data('id');
-        getdetail("/master/edit_jurusan","id="+id);
+        getdetail("/kriteria/edit","id="+id);
     });
 
     doc.on('click','.delete',function(){
         var id = $(this).data('id');
         if(confirm("Anda yakin menghapus data ?")){
-            getdelete("/master/del_jurusan","id="+id,function done_callback(){
+            getdelete("/kriteria/delete","id="+id,function done_callback(){
                 oTable.fnReloadAjax();
             });
         }

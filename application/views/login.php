@@ -20,11 +20,11 @@
     </head>
     <body class="bg-black">
         <div class="form-box" id="login-box">
-            <div class="header">Sistem Informasi Penilaian</div>
+            <div class="header">SPK AHP Topsis</div>
             <form action="<?php echo site_url("login/dologin")?>" method="post">
                 <div class="body bg-gray">
                     <div class="form-group">
-                        <input type="text" name="username" class="form-control" placeholder="Username"/>
+                        <input type="text" name="user_id" class="form-control" placeholder="User Id"/>
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" placeholder="Password"/>

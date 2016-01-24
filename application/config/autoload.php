@@ -88,7 +88,13 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('handle_helper','url','file','security','string');
+$autoload['helper'] = array(
+    'handle_helper',
+    'url',
+    'file',
+    'security',
+    'string'
+);
 
 
 /*
@@ -137,4 +143,6 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array(
+    'userauth_model' => 'userauth',
+    'tahun_ajaran_model' => 'tahun_ajaran');

@@ -453,3 +453,8 @@ function send_mail_password($email, $password)
 
     $ci->email->send();
 }
+
+function count_dashboard($tipe)
+{
+    return "0";
+}

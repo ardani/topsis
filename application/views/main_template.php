@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sistem Informasi Penilaian</title>
+    <title>SPK AHP Topsis</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="<?php echo base_url()?>asset/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url()?>asset/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
 <!-- header logo: style can be found in header.less -->
 <header class="header">
     <a href="main.php" class="logo">
-        Sisfo Penilaian
+        SPK AHP
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -84,12 +84,10 @@
                     </a>
                 </li>
                 <?php
-                if($this->session->userdata('user_access') == '1') {
+                if($this->session->userdata('role') == '1') {
                     include APPPATH.'views/admin_menu.php';
-                }elseif($this->session->userdata('user_access') == '2') {
-                    include APPPATH.'views/guru_menu.php';
-                }else{
-                    include APPPATH.'views/siswa_menu.php';
+                }elseif($this->session->userdata('role') == '2') {
+                    include APPPATH . 'views/kepsek_menu.php';
                 }
                 ?>
             </ul>

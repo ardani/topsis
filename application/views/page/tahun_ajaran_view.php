@@ -9,15 +9,11 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Kode Tahun Ajaran</label>
-                        <input type="text" name="kd_semester" data-tag="input" class="form-control" placeholder="kode tahun ajaran">
+                        <input type="text" name="kode_tahun_ajaran" data-tag="input" class="form-control" placeholder="kode tahun ajaran">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Semester</label>
-                        <input type="text" name="semester" data-tag="input" class="form-control" placeholder="semester">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1"> Tahun Ajaran</label>
-                        <input type="text" name="tahun_ajaran" data-tag="input" class="form-control" placeholder="nama tahun ajaran">
+                        <label for="exampleInputPassword1">Nama Tahun Ajaran</label>
+                        <input type="text" name="nama_tahun_ajaran" data-tag="input" class="form-control" placeholder="nama tahun ajaran">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"> Status</label>
@@ -43,7 +39,6 @@
                <thead>
                 <tr>
                     <th>Kode</th>
-                    <th>Semester</th>
                     <th>Tahun Ajaran</th>
                     <th>Status</th>
                     <th>Menu</th>
