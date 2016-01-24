@@ -1,2 +1,3 @@
 .idea
 error.log
+/application/config/database.php
