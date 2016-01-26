@@ -52,18 +52,19 @@
         "sAjaxSource": "/siswa/get"
     });
     var doc =  $('#etable');
-    doc.on('click','.edit',function(){
-        var id = $(this).data('id');
-        getdetail("/siswa/edit","id="+id);
-    });
-
     doc.on('click','.delete',function(){
         var id = $(this).data('id');
         if(confirm("Anda yakin menghapus data ?")){
             getdelete("/siswa/delete","id="+id,function done_callback(){
                 oTable.fnReloadAjax();
             });
-
         }
     });
+
+    doc.on('click','.edit',function(){
+        var id = $(this).data('id');
+        getdetail("/siswa/edit","id="+id);
+    });
+
+
 </script>

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.42)
 # Database: topsisdb
-# Generation Time: 2016-01-24 12:11:00 +0000
+# Generation Time: 2016-01-26 16:11:39 +0000
 # ************************************************************
 
 
@@ -38,7 +38,11 @@ LOCK TABLES `kriteria` WRITE;
 
 INSERT INTO `kriteria` (`id_kriteria`, `kode_kriteria`, `nama_kriteria`, `bobot`)
 VALUES
-	(1,'C1','nilai uas',0.00);
+	(1,'C1','Raport',0.00),
+	(2,'C2','Placement',0.00),
+	(3,'C3','US',0.00),
+	(4,'C4','Minat',0.00),
+	(5,'C5','UN',0.00);
 
 /*!40000 ALTER TABLE `kriteria` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -52,11 +56,19 @@ DROP TABLE IF EXISTS `nilai`;
 CREATE TABLE `nilai` (
   `id_nilai` int(11) NOT NULL AUTO_INCREMENT,
   `nis` int(8) NOT NULL,
-  `kode_kriteria` varchar(2) NOT NULL,
-  `nilai` decimal(10,2) NOT NULL,
+  `nilai` text NOT NULL,
   PRIMARY KEY (`id_nilai`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+LOCK TABLES `nilai` WRITE;
+/*!40000 ALTER TABLE `nilai` DISABLE KEYS */;
+
+INSERT INTO `nilai` (`id_nilai`, `nis`, `nilai`)
+VALUES
+	(2,1000,'{\"C1\":\"12\",\"C2\":\"10\",\"C3\":\"12\",\"C4\":\"13\",\"C5\":\"50\"}');
+
+/*!40000 ALTER TABLE `nilai` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table siswa
@@ -69,15 +81,17 @@ CREATE TABLE `siswa` (
   `nis` int(8) NOT NULL,
   `nama_siswa` varchar(200) NOT NULL,
   `jurusan` varchar(3) NOT NULL,
+  `kode_tahun_ajaran` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_siswa`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 LOCK TABLES `siswa` WRITE;
 /*!40000 ALTER TABLE `siswa` DISABLE KEYS */;
 
-INSERT INTO `siswa` (`id_siswa`, `nis`, `nama_siswa`, `jurusan`)
+INSERT INTO `siswa` (`id_siswa`, `nis`, `nama_siswa`, `jurusan`, `kode_tahun_ajaran`)
 VALUES
-	(1,1000,'ardani rohman','');
+	(1,1000,'ardani rohman','',201520161),
+	(3,1001,'rina','',201520161);
 
 /*!40000 ALTER TABLE `siswa` ENABLE KEYS */;
 UNLOCK TABLES;

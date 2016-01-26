@@ -22,7 +22,7 @@
     </a>
 </li>
 <li>
-    <a href="<?php echo site_url("nilai_siswa")?>">
+    <a href="<?php echo site_url("nilaisiswa")?>">
         <i class="fa fa-dashboard"></i> <span>3. Nilai Siswa</span>
     </a>
 </li>
