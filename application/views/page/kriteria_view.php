@@ -34,6 +34,7 @@
                 <tr>
                     <th>Kode</th>
                     <th>kriteria</th>
+                    <th>Bobot</th>
                     <th>Menu</th>
                 </tr>
                </thead>
