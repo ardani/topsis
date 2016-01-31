@@ -14,6 +14,9 @@
         <li><a href="<?php echo site_url("pembobotan_kriteria") ?>" style="margin-left: 10px;">
                 <i class="fa fa-angle-double-right"></i>1.2 Pembobotan Kriteria</a>
         </li>
+        <li><a href="<?php echo site_url("batasnilai") ?>" style="margin-left: 10px;">
+                <i class="fa fa-angle-double-right"></i>1.3 Batas Nilai</a>
+        </li>
     </ul>
 </li>
 <li>
