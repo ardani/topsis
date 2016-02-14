@@ -456,5 +456,16 @@ function send_mail_password($email, $password)
 
 function count_dashboard($tipe)
 {
-    return "0";
+    $ci =& get_instance();
+    $ci->load->model("siswa_model","siswa");
+    $ci->load->model("kriteria_model","kriteria");
+    switch($tipe) {
+        case "siswa":
+            $count = $ci->siswa->get()->num_rows();
+            break;
+        case "kriteria";
+            $count = $ci->kriteria->get()->num_rows();
+            break;
+    }
+    return $count;
 }

@@ -8,7 +8,7 @@
             <form role="form" action="<?php echo site_url("batasnilai/save")?>" method="post">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Kriteria</label>
+                        <label for="exampleInputEmail1">Kritaeria</label>
                         <select class="form-control" data-tag="select" name="kode_kriteria">
                             <?php foreach($kriterias->result() as $item): ?>
                                 <option value="<?=$item->kode_kriteria?>"><?=$item->nama_kriteria?></option>

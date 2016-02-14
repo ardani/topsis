@@ -45,7 +45,14 @@
                 <?php foreach ($kriterias->result() as $item ):?>
                     <div class="form-group">
                         <label for=""><?=$item->nama_kriteria?></label>
-                        <input type="text" name="nilai[<?=$item->kode_kriteria?>]" data-tag="input" class="<?=$item->kode_kriteria?> form-control">
+                        <?php if($item->kode_kriteria == "C4"): ?>
+                            <select name="nilai[<?=$item->kode_kriteria?>]" class="<?=$item->kode_kriteria?> form-control" data-tag="select">
+                                <option value="1">IPA</option>
+                                <option value="2">IPS</option>
+                            </select>
+                        <?php else: ?>
+                            <input type="text" name="nilai[<?=$item->kode_kriteria?>]" data-tag="input" class="<?=$item->kode_kriteria?> form-control">
+                        <?php endif ?>
                     </div>
                 <?php endforeach; ?>
             </div>

@@ -14,7 +14,8 @@ class Siswanilai_model extends CI_Model {
         {
             $this->db->where('id_nilai',$id);
         }
-
+        $this->db->join('siswa','siswa.nis = nilai.nis')
+        ->where('kode_tahun_ajaran',$this->tahun);
         return $this->db->get($this->table);
     }
 

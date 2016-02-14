@@ -56,6 +56,16 @@ class Siswa_model extends CI_Model {
         return  $this->datatables->generate();
     }
 
+    public function dataajax_hasil_jurusan()
+    {
+        $this->datatables
+            ->select('id_siswa,nis,nama_siswa,jurusan')
+            ->from($this->table)
+            ->unset_column('id_siswa')
+            ->where('kode_tahun_ajaran',$this->tahun);
+        return  $this->datatables->generate();
+    }
+
     public function detail($id)
     {
         $this->db->select('id_siswa,nis,nama_siswa');

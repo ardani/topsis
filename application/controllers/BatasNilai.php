@@ -15,7 +15,7 @@ class BatasNilai extends CI_Controller {
             'subtitle' => 'Manage Data Batas Nilai',
             'kriterias' => $this->kriteria->get(),
             'variable' => array('Sangat Kurang (SK)', 'Kurang  (K)', 'Cukup (C)',
-                'Baik  (B)','Sangat Baik (SB)'),
+                'Baik  (B)','Sangat Baik (SB)','IPA','IPS'),
             'msg' => $this->flash->display('success', TRUE)
         );
         $this->template->load('main_template','page/batasnilai_view',$data);
