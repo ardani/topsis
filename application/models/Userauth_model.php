@@ -19,15 +19,7 @@ class Userauth_model extends CI_Model
         if ($log_user->num_rows() == 1) {
             foreach ($log_user->result() as $row) {
                 $id = $row->user_id;
-                switch ($row->role){
-                    case "1":
-                        $nama = $row->nama;
-                    break;
-                    case "2":
-                        $nama = $row->nama;
-                    break;
-                }
-                $nama = $nama;
+                $nama = $row->nama;
                 $user_access = $row->role;
             }
 

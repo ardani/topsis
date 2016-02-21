@@ -3400,3 +3400,6 @@ fieldset[disabled] .btn-vk.active {
   color: #587ea3;
   background-color: #ffffff;
 }
+.no-margin-left {
+  margin-left: 0px;
+}
