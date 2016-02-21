@@ -43,7 +43,7 @@ class Kriteria_model extends CI_Model {
     public function dataajax()
     {
         $this->datatables
-            ->select('id_kriteria,kode_kriteria,nama_kriteria')
+            ->select('id_kriteria,kode_kriteria,nama_kriteria,bobot')
             ->from($this->table)
             ->unset_column('id_kriteria')
             ->add_column("menu",'<div class="tools"><a class="edit" data-id="$1" href="javascript:void(0)"><i class="fa fa-edit"></i> edit</a>

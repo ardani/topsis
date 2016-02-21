@@ -27,12 +27,12 @@
     </a>
 </li>
 <li>
-    <a href="<?php echo site_url("Proses Penjurusan")?>">
+    <a href="<?php echo site_url("proses_penjurusan")?>">
         <i class="fa fa-dashboard"></i> <span>4. Proses Penjurusan</span>
     </a>
 </li>
 <li>
-    <a href="<?php echo site_url("Hasil Penjurusan")?>">
+    <a href="<?php echo site_url("hasil_penjurusan")?>">
         <i class="fa fa-dashboard"></i> <span>5. Hasil Penjurusan</span>
     </a>
 </li>

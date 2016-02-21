@@ -33,7 +33,8 @@
                <thead>
                 <tr>
                     <th>Kode</th>
-                    <th>kriteria</th>
+                    <th>Kriteria</th>
+                    <th>Bobot</th>
                     <th>Menu</th>
                 </tr>
                </thead>

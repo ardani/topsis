@@ -37,15 +37,15 @@
                     <label for="exampleInputEmail1">Nilai Siswa</label>
                     <select name="nis" class="form-control nis" data-tag="select">
                         <?php foreach($siswas->result() as $siswa): ?>
-                            <option value="<?=$siswa->nis?>"><?=$siswa->nama_siswa?></option>
+                            <option value="<?php echo $siswa->nis?>"><?php echo $siswa->nama_siswa?></option>
                         <?php endforeach; ?>
                     </select>
                     <input type="hidden" name="id_nilai" class="id_nilai" data-tag="input" >
                 </div>
                 <?php foreach ($kriterias->result() as $item ):?>
                     <div class="form-group">
-                        <label for=""><?=$item->nama_kriteria?></label>
-                        <input type="text" name="nilai[<?=$item->kode_kriteria?>]" data-tag="input" class="<?=$item->kode_kriteria?> form-control">
+                        <label for=""><?php echo $item->nama_kriteria?></label>
+                        <input type="text" name="nilai[<?php echo $item->kode_kriteria?>]" data-tag="input" class="<?php echo $item->kode_kriteria?> form-control">
                     </div>
                 <?php endforeach; ?>
             </div>
